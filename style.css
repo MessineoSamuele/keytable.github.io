@@ -11,3 +11,7 @@
 .primarycol {
     color: #FF5722
 }
+
+#navbarMenuHeroC {
+    background-color: transparent !important;
+}

@@ -16,7 +16,7 @@
 </head>
 
 <body>
-    <section class="hero is-success is-fullheight">
+    <section class="hero is-dark is-fullheight">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
             <header class="navbar is-transparent">
@@ -48,7 +48,6 @@
             </header>
         </div>
 
-        <!-- Hero content: will be in the middle -->
         <div class="hero-body">
             <div class="container has-text-centered">
                 <h1 class="title is-1">
@@ -60,22 +59,45 @@
             </div>
         </div>
 
-        <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>Overview</a></li>
-                        <li><a>Modifiers</a></li>
-                        <li><a>Grid</a></li>
-                        <li><a>Elements</a></li>
-                        <li><a>Components</a></li>
-                        <li><a>Layout</a></li>
+                        <li><a href="https://www.instagram.com/samuelemessineo" target="_blank"><strong class="primarycol">Instagram</strong></a></li>
+                        <li><a href="https://www.github.com/keytable" target="_blank"><strong class="primarycol">Github</strong></a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // Get all "navbar-burger" elements
+            const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+            // Check if there are any navbar burgers
+            if ($navbarBurgers.length > 0) {
+
+                // Add a click event on each of them
+                $navbarBurgers.forEach(el => {
+                    el.addEventListener('click', () => {
+
+                        // Get the target from the "data-target" attribute
+                        const target = el.dataset.target;
+                        const $target = document.getElementById(target);
+
+                        // Toggle the "is-active" class on both the "navbar-burger" and the "navbar-menu"
+                        el.classList.toggle('is-active');
+                        $target.classList.toggle('is-active');
+
+                    });
+                });
+            }
+
+        });
+    </script>
 </body>
 
-</html>
+</html
